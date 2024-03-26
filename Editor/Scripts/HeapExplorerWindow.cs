@@ -801,7 +801,7 @@ namespace HeapExplorer
                 m_IsCapturing = true;
 
                 string snapshotPath = System.IO.Path.ChangeExtension(path, "snapshot");
-                UnityEngine.Profiling.Memory.Experimental.MemoryProfiler.TakeSnapshot(snapshotPath, OnHeapReceivedSaveOnly);
+                Unity.Profiling.Memory.MemoryProfiler.TakeSnapshot(snapshotPath, OnHeapReceivedSaveOnly);
             }
             finally
             {
@@ -847,7 +847,7 @@ namespace HeapExplorer
                 m_IsCapturing = true;
 
                 var path = FileUtil.GetUniqueTempPathInProject();
-                UnityEngine.Profiling.Memory.Experimental.MemoryProfiler.TakeSnapshot(path, OnHeapReceived);
+                Unity.Profiling.Memory.MemoryProfiler.TakeSnapshot(path, OnHeapReceived);
             }
             finally
             {
